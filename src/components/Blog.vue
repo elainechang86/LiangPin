@@ -5,7 +5,13 @@
       src="../assets/blog/web.png"
     />
     <img
-      style="position: absolute; margin-left: 15%; margin-top: 16%; width: 25%; z-index: 100;"
+      style="
+        position: absolute;
+        margin-left: 15%;
+        margin-top: 16%;
+        width: 25%;
+        z-index: 100;
+      "
       src="../assets/mainPageImgs/Liang.png"
     />
     <a style="width: 10%"
@@ -13,11 +19,24 @@
         style="position: absolute; margin-left: 2.8%; margin-top: 3%"
         src="../assets/mainPageImgs/Frame.png"
     /></a>
-    <b-col class="col-12" style="margin-top: 7%; text-align: right; padding: 0; position: relative; z-index: 99;">
+    <b-col
+      class="col-12"
+      style="
+        margin-top: 7%;
+        text-align: right;
+        padding: 0;
+        position: relative;
+        z-index: 99;
+      "
+    >
       <img
         src="../assets/blog/back.png"
-        style="width: 73vw; positive: relative; right: 0; z-index: 99;"
+        style="width: 73vw; positive: relative; right: 0; z-index: 99"
       />
+      <p class="vertical-word">良文共閱專區</p>
+      <span
+        ><img src="../assets/mainPageImgs/circle.svg" class="circle-blog"
+      /></span>
     </b-col>
     <b-col
       class="col-7 offset-5"
@@ -32,9 +51,17 @@
     </b-col>
     <b-row>
       <b-row
-        style="width: 100%; text-align: center; margin-top: 15%; padding: 0 34%; z-index: 99;"
+        style="
+          width: 100%;
+          text-align: center;
+          margin-top: 15%;
+          padding: 0 34%;
+          z-index: 99;
+        "
       >
-        <b-col class="blog-header blog-header-selected"><a href="/">免費資源</a></b-col>
+        <b-col class="blog-header blog-header-selected"
+          ><a href="/">免費資源</a></b-col
+        >
         <b-col class="blog-header"><a href="/">產業新知</a></b-col>
         <b-col class="blog-header"><a href="/">比賽資訊</a></b-col>
         <b-col class="blog-header"><a href="/">老師經驗談</a></b-col>
@@ -268,9 +295,9 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 
 body {
   overflow-x: hidden;
@@ -285,6 +312,29 @@ body {
   display: block;
   background-color: #eeeeee;
   overflow: hidden;
+}
+
+.vertical-word {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: absolute;
+  right: 14%;
+  top: 15%;
+  font-family: "Noto Serif JP";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 125%;
+  letter-spacing: 10px;
+  color: #ffffff;
+}
+
+.circle-blog {
+  position: absolute;
+  right: 14%;
+  top: 13%;
+  width: 6.5vw;
+  mix-blend-mode: difference;
+  transform: rotate(90deg);
 }
 
 .topic {
@@ -312,7 +362,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.blog-header-selected{
+.blog-header-selected {
   color: #000000;
   font-weight: 600;
 }
@@ -356,7 +406,7 @@ body {
 }
 
 .card-text-top {
-  font-family: 'Noto Serif JP';
+  font-family: "Noto Serif JP";
   position: absolute;
   bottom: 55px;
   padding: 0 28px;
