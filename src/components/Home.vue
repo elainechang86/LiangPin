@@ -1,12 +1,12 @@
 <template>
   <b-row class="col-12 main-row">
     <img
-      style="position: absolute; margin-left: 15%; margin-top: 16%; width: 25%"
-      src="../assets/mainPageImgs/Liang.png"
-    />
-    <img
       style="position: absolute; margin-top: 22%; width: 56%"
       src="../assets/mainPageImgs/web.png"
+    />
+    <img
+      style="position: absolute; margin-left: 15%; margin-top: 16%; width: 25%"
+      src="../assets/mainPageImgs/Liang.png"
     />
     <img
       style="
@@ -177,7 +177,7 @@
         style="vertical-align: middle; text-align: right; margin-top: -6%"
       >
         <a>
-          <p class="more-post">
+          <p class="more-post" style="right: 78%">
             更多作品
             <img src="../assets/mainPageImgs/arrow.svg" class="arrow" />
           </p>
@@ -304,7 +304,7 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: block;
   background-color: #eeeeee;
   overflow: hidden;
 }
@@ -386,6 +386,7 @@ body {
   line-height: 50px;
   color: #000000;
   position: absolute;
+  right: 12%;
 }
 
 .chou {

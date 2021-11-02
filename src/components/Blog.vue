@@ -1,22 +1,22 @@
 <template>
   <b-row class="col-12 main-row">
     <img
-      style="position: absolute; margin-left: 15%; margin-top: 16%; width: 25%"
-      src="../assets/mainPageImgs/Liang.png"
-    />
-    <img
       style="position: absolute; margin-top: 22%; width: 83%"
       src="../assets/blog/web.png"
+    />
+    <img
+      style="position: absolute; margin-left: 15%; margin-top: 16%; width: 25%; z-index: 100;"
+      src="../assets/mainPageImgs/Liang.png"
     />
     <a style="width: 10%"
       ><img
         style="position: absolute; margin-left: 2.8%; margin-top: 3%"
         src="../assets/mainPageImgs/Frame.png"
     /></a>
-    <b-col class="col-12" style="margin-top: 7%; text-align: right; padding: 0">
+    <b-col class="col-12" style="margin-top: 7%; text-align: right; padding: 0; position: relative; z-index: 99;">
       <img
         src="../assets/blog/back.png"
-        style="width: 73vw; positive: relative; right: 0"
+        style="width: 73vw; positive: relative; right: 0; z-index: 99;"
       />
     </b-col>
     <b-col
@@ -32,12 +32,12 @@
     </b-col>
     <b-row>
       <b-row
-        style="width: 100%; text-align: center; margin-top: 15%; padding: 0 34%;"
+        style="width: 100%; text-align: center; margin-top: 15%; padding: 0 34%; z-index: 99;"
       >
-        <b-col class="blog-header blog-header-selected">免費資源</b-col>
-        <b-col class="blog-header">產業新知</b-col>
-        <b-col class="blog-header">比賽資訊</b-col>
-        <b-col class="blog-header">老師經驗談</b-col>
+        <b-col class="blog-header blog-header-selected"><a href="/">免費資源</a></b-col>
+        <b-col class="blog-header"><a href="/">產業新知</a></b-col>
+        <b-col class="blog-header"><a href="/">比賽資訊</a></b-col>
+        <b-col class="blog-header"><a href="/">老師經驗談</a></b-col>
       </b-row>
       <b-col class="col-9 offset-1" style="margin-top: 2%">
         <b-row class="col-12" style="margin-left: 8%">
@@ -278,7 +278,7 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: block;
   background-color: #eeeeee;
   overflow: hidden;
 }
@@ -378,5 +378,10 @@ body {
 .card-body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 </style>
