@@ -268,6 +268,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
 body {
   overflow-x: hidden;
 }
@@ -352,6 +356,7 @@ body {
 }
 
 .card-text-top {
+  font-family: 'Noto Serif JP';
   position: absolute;
   bottom: 55px;
   padding: 0 28px;

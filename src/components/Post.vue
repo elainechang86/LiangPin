@@ -79,12 +79,15 @@
         style="padding: 0 6%; margin-top: 8%; text-align: center"
       >
         <a>
-          <p class="more-post">其他文章</p>
+          <p class="more-post-post">其他文章</p>
           <span
             ><img src="../assets/mainPageImgs/circle.svg" class="circle"
           /></span>
         </a>
-        <b-row class="col-12" style="margin-left: 1%; text-align: left; margin-top: 5vh">
+        <b-row
+          class="col-12"
+          style="margin-left: 1%; text-align: left; margin-top: 5vh"
+        >
           <b-col>
             <b-card
               class="post-card"
@@ -239,6 +242,10 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
 body {
   overflow-x: hidden;
 }
@@ -313,7 +320,7 @@ body {
 }
 
 .second-part-title {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-weight: 600;
   font-size: 24px;
   line-height: 38px;
@@ -363,17 +370,13 @@ td {
   mix-blend-mode: difference;
   position: relative;
   left: 0%;
-  
 }
 
-.more-post {
+.more-post-post {
   margin-left: 7%;
-  font-weight: bold;
-  font-size: 16px;
-  color: #000000;
   position: absolute;
   left: 41%;
-  font-family: Noto Serif JP;
+  font-family: "Noto Serif JP";
   font-weight: bold;
   font-size: 40px;
   line-height: 260%;
@@ -420,6 +423,7 @@ td {
 }
 
 .card-text-top {
+  font-family: "Noto Serif JP";
   position: absolute;
   bottom: 55px;
   padding: 0 28px;
@@ -430,6 +434,7 @@ td {
 }
 
 .card-text-top span {
+  font-family: "Poppins";
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0.75px;
