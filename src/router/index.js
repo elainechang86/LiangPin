@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Home from '../components/Home'
 import Blog from '../components/Blog'
 import Post from '../components/Post'
+import About from '../components/About'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
             path: '/Post',
             name: 'Post',
             component: Post,
+        },
+        {
+            path: '/About',
+            name: 'About',
+            component: About,
         }
     ]
 })
