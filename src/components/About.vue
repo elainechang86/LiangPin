@@ -4,6 +4,10 @@
       style="position: absolute; margin-top: 22%; width: 80%"
       src="../assets/about/web.png"
     />
+    <img
+      style="position: absolute; margin-top: 132%; right: 0; width: 80%"
+      src="../assets/about/web.png"
+    />
     <a style="width: 10%"
       ><img
         style="position: absolute; margin-left: 2.8%; margin-top: 3%"
@@ -130,6 +134,61 @@
         </b-carousel>
       </b-col>
     </b-row>
+    <b-row style="margin-top: 24vh">
+      <b-col class="col-1 offset-1">
+        <div>
+          <p
+            class="vertical-word price-title"
+            style="position: relative; left: 80%; color: black"
+          >
+            合作受眾
+          </p>
+          <span
+            ><img src="../assets/mainPageImgs/circle.svg" class="circle-coop"
+          /></span>
+        </div>
+      </b-col>
+      <b-col class="col-10" style="left: -8%; position: relative">
+        <div id="b">
+          <div class="horizontal-scroll-wrapper rectangles flexcroll">
+            <img src="../assets/about/carousel1-1.png" />
+            <img src="../assets/about/carousel1-2.png" />
+            <img src="../assets/about/carousel1-3.png" />
+            <img src="../assets/about/carousel1-1.png" />
+            <img src="../assets/about/carousel1-2.png" />
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+    <b-row style="margin-top: 4vh">
+        <b-col class="col-10 offset-1" style="left: -8%; position: relative">
+        <div id="c">
+          <div class="horizontal-scroll-wrapper rectangles flexcroll">
+            <img src="../assets/about/carousel2-1.png" />
+            <img src="../assets/about/carousel2-2.png" />
+            <img src="../assets/about/carousel2-3.png" />
+            <img src="../assets/about/carousel2-4.png" />
+            <img src="../assets/about/carousel2-1.png" />
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col
+        class="col-12"
+        style="vertical-align: middle; text-align: center; margin-top: 15vh"
+      >
+        <a>
+          <p class="more-post">
+            聯絡我們
+            <img src="../assets/mainPageImgs/arrow.svg" class="arrow" />
+          </p>
+          <span
+            ><img src="../assets/mainPageImgs/circle.svg" class="circle circle-contact"
+          /></span>
+        </a>
+      </b-col>
+    </b-row>
     <b-row style="margin: 0; padding: 0">
       <b-col
         class="col-12"
@@ -179,11 +238,73 @@
   </b-row>
 </template>
 
+
 <script>
+import $ from "jquery";
+
 export default {
   name: "About",
   data() {
     return {};
+  },
+  methods: {
+    getFoo() {
+      $("div.foo").html();
+    },
+  },
+  mounted() {
+    var scroller = {};
+    scroller.e = document.getElementById("b");
+    scroller.c = document.getElementById("c");
+
+    if (scroller.e.addEventListener) {
+      scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
+      scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+    } else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+
+    function MouseWheelHandler(e) {
+      // cross-browser wheel delta
+      var e = window.event || e;
+      var delta = -100 * Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+
+      var pst = $("#b").scrollLeft() + delta;
+      var pst = $("#c").scrollLeft() + delta;
+
+      if (pst < 0) {
+        pst = 0;
+      } else if (pst > $(".horizontal-scroll-wrapper").width()) {
+        pst = $(".horizontal-scroll-wrapper").width();
+      }
+
+      $("#b").scrollLeft(pst);
+      $("#c").scrollLeft(pst);
+
+      return false;
+    }
+    if (scroller.c.addEventListener) {
+      scroller.c.addEventListener("mousewheel", MouseWheelHandler, false);
+      scroller.c.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+    } else scroller.c.attachEvent("onmousewheel", MouseWheelHandler);
+
+    function MouseWheelHandler(c) {
+      // cross-browser wheel delta
+      var c = window.event || c;
+      var delta = -100 * Math.max(-1, Math.min(1, c.wheelDelta || -c.detail));
+
+      var pst = $("#b").scrollLeft() + delta;
+      var pst = $("#c").scrollLeft() + delta;
+
+      if (pst < 0) {
+        pst = 0;
+      } else if (pst > $(".horizontal-scroll-wrapper").width()) {
+        pst = $(".horizontal-scroll-wrapper").width();
+      }
+
+      $("#b").scrollLeft(pst);
+      $("#c").scrollLeft(pst);
+
+      return false;
+    }
   },
 };
 </script>
@@ -192,6 +313,54 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+#b::-webkit-scrollbar:vertical, #c::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+#b::-webkit-scrollbar:horizontal, #c::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+#b::-webkit-scrollbar-thumb, #c::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: transparent; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+#b::-webkit-scrollbar-track, #c::-webkit-scrollbar-track { 
+    background-color: transparent; 
+    border-radius: 8px; 
+} 
+
+#b {
+  box-sizing: border-box;
+  white-space: nowrap;
+  height: 262px;
+  width: 86%;
+  margin-left: 20vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#c {
+  box-sizing: border-box;
+  white-space: nowrap;
+  height: 262px;
+  width: 104%;
+  margin-left: 15vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.horizontal-scroll-wrapper {
+  padding: 0px;
+  margin: 0px;
+}
+
+.horizontal-scroll-wrapper img {
+  display: inline-block;
+}
 
 .main-row {
   background-image: url("../assets/mainPageImgs/background.png");
@@ -288,6 +457,21 @@ export default {
   mix-blend-mode: difference;
 }
 
+.circle-coop {
+  position: absolute;
+  left: 15%;
+  top: 395%;
+  width: 6%;
+  mix-blend-mode: difference;
+}
+
+.circle-contact{
+  position: relative;
+  left: 2%;
+  bottom: 55%;
+  mix-blend-mode: difference;
+}
+
 .carousel-control-prev {
   left: -8%;
 }
@@ -313,7 +497,6 @@ export default {
   display: none;
 }
 
-
 .footer-line {
   margin: 0 3%;
 }
@@ -335,7 +518,7 @@ export default {
 }
 
 .copyright {
-  font-family: 'Noto Sans TC';
+  font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
