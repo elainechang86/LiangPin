@@ -21,6 +21,8 @@ body {
   margin: 0;
   display: inline-block;
   background-color: #eeeeee;
+  background-image: url("./assets/portfolio/Bg.png");
+  background-size: 100% 100%;
   overflow: hidden;
 }
 </style>
