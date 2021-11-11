@@ -98,15 +98,13 @@
               <b-col style="text-align: left">
                 <img src="../assets/portfolio/2008-3.png" style="width: 70%"
               /></b-col>
-              <a>   
-                <img
-                  src="../assets/portfolio/arrow.png"
-                  class="arrow-port"
-                />
-                <span><p class="more-post-port">查看全部</p>
-                <img
-                  src="../assets/mainPageImgs/circle.svg"
-                  class="circle-port-small"
+              <a>
+                <img src="../assets/portfolio/arrow.png" class="arrow-port" />
+                <span
+                  ><p class="more-post-port">查看全部</p>
+                  <img
+                    src="../assets/mainPageImgs/circle.svg"
+                    class="circle-port-small"
                 /></span>
               </a>
             </b-row>
@@ -125,15 +123,13 @@
               <b-col style="text-align: left">
                 <img src="../assets/portfolio/2011-3.png" style="width: 100%"
               /></b-col>
-              <a>   
-                <img
-                  src="../assets/portfolio/arrow.png"
-                  class="arrow-port"
-                />
-                <span><p class="more-post-port">查看全部</p>
-                <img
-                  src="../assets/mainPageImgs/circle.svg"
-                  class="circle-port-small"
+              <a>
+                <img src="../assets/portfolio/arrow.png" class="arrow-port" />
+                <span
+                  ><p class="more-post-port">查看全部</p>
+                  <img
+                    src="../assets/mainPageImgs/circle.svg"
+                    class="circle-port-small"
                 /></span>
               </a>
             </b-row>
@@ -148,15 +144,13 @@
               <b-col style="text-align: left">
                 <img src="../assets/portfolio/2016-2.png" style="width: 100%"
               /></b-col>
-              <a>   
-                <img
-                  src="../assets/portfolio/arrow.png"
-                  class="arrow-port"
-                />
-                <span><p class="more-post-port">查看全部</p>
-                <img
-                  src="../assets/mainPageImgs/circle.svg"
-                  class="circle-port-small"
+              <a>
+                <img src="../assets/portfolio/arrow.png" class="arrow-port" />
+                <span
+                  ><p class="more-post-port">查看全部</p>
+                  <img
+                    src="../assets/mainPageImgs/circle.svg"
+                    class="circle-port-small"
                 /></span>
               </a>
             </b-row>
@@ -278,31 +272,65 @@ button:focus {
 }
 
 .more-post-port {
-  position: absolute;
+  position: relative;
   right: -14%;
-  bottom: 2%;
+  bottom: 30%;
   font-family: "Noto Serif TC";
   font-weight: bold;
   font-size: 16px;
   padding-right: 50px;
-  line-height: 400%;
-  background-color: rgb(217, 217, 217);
+  line-height: 430%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgb(217, 217, 217),
+    rgb(217, 217, 217),
+    rgb(217, 217, 217)
+  );
   color: #14142b;
+  text-align: right;
 }
 
 .arrow-port {
-  position: absolute;
+  position: relative;
   right: -10%;
-  bottom: 8%;
+  bottom: 5%;
   z-index: 11;
 }
 
 .circle-port-small {
-  position: absolute;
+  position: relative;
   right: -12%;
-  bottom: 5%;
+  bottom: 76%;
   width: 55px;
   mix-blend-mode: difference;
-  transform: rotate(270deg);
+  transform: rotate(270deg);  
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.circle-port-small:hover {
+  animation: fadeInOut 0.5s linear forwards;
+  transform: scale(1.2);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>

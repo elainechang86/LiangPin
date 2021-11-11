@@ -151,24 +151,24 @@
       <b-col class="col-10" style="left: -8%; position: relative">
         <div id="b">
           <div class="horizontal-scroll-wrapper rectangles flexcroll">
-            <img src="../assets/about/carousel1-1.png" />
-            <img src="../assets/about/carousel1-2.png" />
-            <img src="../assets/about/carousel1-3.png" />
-            <img src="../assets/about/carousel1-1.png" />
-            <img src="../assets/about/carousel1-2.png" />
+            <img src="../assets/about/carousel-1-1.png" />
+            <img src="../assets/about/carousel-1-2.png" />
+            <img src="../assets/about/carousel-1-3.png" />
+            <img src="../assets/about/carousel-1-1.png" />
+            <img src="../assets/about/carousel-1-2.png" />
           </div>
         </div>
       </b-col>
     </b-row>
     <b-row style="margin-top: 4vh">
-        <b-col class="col-10 offset-1" style="left: -8%; position: relative">
+      <b-col class="col-10 offset-1" style="left: -8%; position: relative">
         <div id="c">
           <div class="horizontal-scroll-wrapper rectangles flexcroll">
-            <img src="../assets/about/carousel2-1.png" />
-            <img src="../assets/about/carousel2-2.png" />
-            <img src="../assets/about/carousel2-3.png" />
-            <img src="../assets/about/carousel2-4.png" />
-            <img src="../assets/about/carousel2-1.png" />
+            <img src="../assets/about/carousel-2-1.png" />
+            <img src="../assets/about/carousel-2-2.png" />
+            <img src="../assets/about/carousel-2-3.png" />
+            <img src="../assets/about/carousel-2-4.png" />
+            <img src="../assets/about/carousel-2-1.png" />
           </div>
         </div>
       </b-col>
@@ -179,12 +179,14 @@
         style="vertical-align: middle; text-align: center; margin-top: 15vh"
       >
         <a>
-          <p class="more-post">
+          <p class="contact-us">
             聯絡我們
             <img src="../assets/mainPageImgs/arrow.svg" class="arrow" />
           </p>
           <span
-            ><img src="../assets/mainPageImgs/circle.svg" class="circle circle-contact"
+            ><img
+              src="../assets/mainPageImgs/circle.svg"
+              class="circle circle-contact"
           /></span>
         </a>
       </b-col>
@@ -315,23 +317,35 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 
 ::-webkit-scrollbar {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
-#b::-webkit-scrollbar:vertical, #c::-webkit-scrollbar:vertical {
-    width: 5px;
+#b::-webkit-scrollbar:vertical,
+#c::-webkit-scrollbar:vertical {
+  width: 5px;
 }
-#b::-webkit-scrollbar:horizontal, #c::-webkit-scrollbar:horizontal {
-    height: 5px;
+#b::-webkit-scrollbar:horizontal,
+#c::-webkit-scrollbar:horizontal {
+  height: 5px;
 }
-#b::-webkit-scrollbar-thumb, #c::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: transparent; /* should match background, can't be transparent */
-    background-color: rgba(0, 0, 0, .5);
+#b::-webkit-scrollbar-thumb,
+#c::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: transparent; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, 0.5);
 }
-#b::-webkit-scrollbar-track, #c::-webkit-scrollbar-track { 
-    background-color: transparent; 
-    border-radius: 8px; 
-} 
+#b::-webkit-scrollbar-track,
+#c::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.horizontal-scroll-wrapper img {
+  -webkit-filter: grayscale(1);
+}
+
+.horizontal-scroll-wrapper img:hover {
+  -webkit-filter: grayscale(0);
+}
 
 #b {
   box-sizing: border-box;
@@ -408,6 +422,18 @@ export default {
   transform: rotate(90deg);
 }
 
+.contact-us {
+  font-family: "Noto Serif JP";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 50px;
+  color: #000000;
+  position: absolute;
+  right: 45%;
+  margin-top: -28px;
+  cursor: pointer;
+}
+
 .poem {
   font-family: Noto Serif JP;
   font-weight: bold;
@@ -465,11 +491,31 @@ export default {
   mix-blend-mode: difference;
 }
 
-.circle-contact{
+.circle-contact {
   position: relative;
-  left: 2%;
+  left: 5%;
   bottom: 55%;
+  width: 4%;
   mix-blend-mode: difference;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.circle-contact:hover {
+  animation: fadeInOut 0.5s linear forwards;
+  transform: scale(1.2);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .carousel-control-prev {

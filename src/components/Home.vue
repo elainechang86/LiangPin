@@ -132,7 +132,7 @@
       style="
         margin-top: 10%;
         position: relative;
-        z-index: 998;
+        z-index: 1;
         margin-left: 14%;
       "
     >
@@ -177,12 +177,12 @@
         style="vertical-align: middle; text-align: right; margin-top: -6%"
       >
         <a>
-          <p class="more-post" style="right: 78%">
+          <p class="more-post" style="right: 78%; z-index: 11;">
             更多作品
             <img src="../assets/mainPageImgs/arrow.svg" class="arrow" />
           </p>
           <span
-            ><img src="../assets/mainPageImgs/circle.svg" class="circle"
+            ><img src="../assets/mainPageImgs/circle.svg" class="circle" style="z-index: 111;"
           /></span>
         </a>
       </b-col>
@@ -294,12 +294,12 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 
-*{
-  font-family: 'Poppins';
+* {
+  font-family: "Poppins";
 }
 
 body {
@@ -334,7 +334,7 @@ body {
 }
 
 .card-text-top {
-  font-family: 'Noto Serif JP';
+  font-family: "Noto Serif JP";
   position: absolute;
   bottom: 55px;
   padding: 0 28px;
@@ -383,13 +383,32 @@ body {
 .circle {
   width: 55px;
   mix-blend-mode: difference;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
   position: relative;
   left: -40%;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.circle:hover {
+  animation: fadeInOut 0.5s linear forwards;
+  transform: scale(1.2);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .more-post {
-  font-family: 'Noto Serif JP';
+  font-family: "Noto Serif JP";
   margin-left: 7%;
   font-weight: bold;
   font-size: 16px;
@@ -397,6 +416,7 @@ body {
   color: #000000;
   position: absolute;
   right: 12%;
+  cursor: pointer;
 }
 
 .chou {
@@ -431,7 +451,7 @@ body {
 }
 
 .copyright {
-  font-family: 'Noto Sans TC';
+  font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
