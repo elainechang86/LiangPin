@@ -28,7 +28,7 @@
       "
       src="../assets/mainPageImgs/Duen.png"
     />
-    <a style="width: 10%"
+    <a style="width: 10%" href="/"
       ><img
         style="position: absolute; margin-left: 2.8%; margin-top: 3%"
         src="../assets/mainPageImgs/Frame.png"
@@ -129,12 +129,7 @@
     </b-row>
     <b-row
       class="col-7 offset-1 align-items-center"
-      style="
-        margin-top: 10%;
-        position: relative;
-        z-index: 1;
-        margin-left: 14%;
-      "
+      style="margin-top: 10%; position: relative; z-index: 1; margin-left: 14%"
     >
       <b-col>
         <img
@@ -177,12 +172,15 @@
         style="vertical-align: middle; text-align: right; margin-top: -6%"
       >
         <a>
-          <p class="more-post" style="right: 78%; z-index: 11;">
+          <p class="more-post" style="right: 78%; z-index: 11">
             更多作品
             <img src="../assets/mainPageImgs/arrow.svg" class="arrow" />
           </p>
           <span
-            ><img src="../assets/mainPageImgs/circle.svg" class="circle" style="z-index: 111;"
+            ><img
+              src="../assets/mainPageImgs/circle.svg"
+              class="circle"
+              style="z-index: 111"
           /></span>
         </a>
       </b-col>
@@ -231,12 +229,13 @@
             <footer>
               <img src="../assets/mainPageImgs/footerLogo.png" />
               <div style="margin-top: 3vh">
-                <a class="footer-menu">首頁</a><span class="footer-line">|</span
-                ><a class="footer-menu">關於周老師</a
+                <a class="footer-menu" href="/">首頁</a
                 ><span class="footer-line">|</span
-                ><a class="footer-menu">良文共閱專區</a
+                ><a class="footer-menu" href="/#/About">關於周老師</a
                 ><span class="footer-line">|</span
-                ><a class="footer-menu">敦雅閣藝廊</a
+                ><a class="footer-menu" href="/#/Blog">良文共閱專區</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/#/Portfolio">敦雅閣藝廊</a
                 ><span class="footer-line">|</span
                 ><a class="footer-menu">FOLLOW US ON</a
                 ><a
@@ -255,8 +254,8 @@
             </footer>
           </b-col>
           <b-col class="col-1" style="margin-left: 8%; margin-top: 12vh">
-            <a
-              ><img src="../assets/mainPageImgs/toTop.png" style="width: 5.5vw"
+            <a @click="scrollToTop()"
+              ><img src="../assets/mainPageImgs/toTop.png" style="width: 5.5vw; cursor: pointer;"
             /></a>
           </b-col>
         </b-row>
@@ -289,6 +288,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>

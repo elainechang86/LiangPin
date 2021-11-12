@@ -19,7 +19,7 @@
       "
       src="../assets/portfolio/ping.png"
     />
-    <a style="width: 10%"
+    <a style="width: 10%" href="/"
       ><img
         style="position: fixed; margin-left: 2.8%; margin-top: 3%"
         src="../assets/mainPageImgs/Frame.png"

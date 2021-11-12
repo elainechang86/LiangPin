@@ -14,7 +14,7 @@
       "
       src="../assets/mainPageImgs/Liang.png"
     />
-    <a style="width: 10%"
+    <a style="width: 10%" href="/"
       ><img
         style="position: absolute; margin-left: 2.8%; margin-top: 3%"
         src="../assets/mainPageImgs/Frame.png"
@@ -232,12 +232,12 @@
             <footer>
               <img src="../assets/mainPageImgs/footerLogo.png" />
               <div style="margin-top: 3vh">
-                <a class="footer-menu">首頁</a><span class="footer-line">|</span
-                ><a class="footer-menu">關於周老師</a
+                <a class="footer-menu" href="/">首頁</a><span class="footer-line">|</span
+                ><a class="footer-menu" href="/#/About">關於周老師</a
                 ><span class="footer-line">|</span
-                ><a class="footer-menu">良文共閱專區</a
+                ><a class="footer-menu" href="/#/Blog">良文共閱專區</a
                 ><span class="footer-line">|</span
-                ><a class="footer-menu">敦雅閣藝廊</a
+                ><a class="footer-menu" href="/#/Portfolio">敦雅閣藝廊</a
                 ><span class="footer-line">|</span
                 ><a class="footer-menu">FOLLOW US ON</a
                 ><a
@@ -256,8 +256,8 @@
             </footer>
           </b-col>
           <b-col class="col-1" style="margin-left: 8%; margin-top: 12vh">
-            <a
-              ><img src="../assets/mainPageImgs/toTop.png" style="width: 5.5vw"
+            <a @click="scrollToTop()"
+              ><img src="../assets/mainPageImgs/toTop.png" style="width: 5.5vw; cursor: pointer;"
             /></a>
           </b-col>
         </b-row>
@@ -291,6 +291,11 @@ export default {
       ],
     };
   },
+  methods:{
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+  }
 };
 </script>
 
