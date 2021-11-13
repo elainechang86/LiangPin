@@ -69,6 +69,7 @@
       <b-col class="col-9 offset-1" style="margin-top: 2%">
         <b-row class="col-12" style="margin-left: 8%">
           <b-col>
+            <a href="/#/Post">
             <b-card
               class="post-card"
               overlay
@@ -90,6 +91,7 @@
                 </b-card-text>
               </b-card-body>
             </b-card>
+            </a>
           </b-col>
           <b-col>
             <b-card
