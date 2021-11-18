@@ -2,7 +2,7 @@
   <b-row class="col-12 main-row">
     <a style="width: 10%" href="/"
       ><img
-        style="position: absolute; margin-left: 2.8%; margin-top: 3%"
+        class="frame-logo"
         src="~@/assets/mainPageImgs/Frame.png"
     /></a>
     <b-row class="col-12">
@@ -253,6 +253,19 @@ export default {
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"); */
+.frame-logo {
+  position: absolute;
+  margin-left: 2.8%;
+  margin-top: 3%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .frame-logo {
+    position: absolute;
+    width: 80px;
+  }
+}
+
 
 body {
   overflow-x: hidden;

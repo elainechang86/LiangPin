@@ -9,9 +9,7 @@
       src="~@/assets/about/web.png"
     />
     <a style="width: 10%" href="/"
-      ><img
-        style="position: absolute; margin-left: 2.8%; margin-top: 3%"
-        src="~@/assets/mainPageImgs/Frame.png"
+      ><img class="frame-logo" src="~@/assets/mainPageImgs/Frame.png"
     /></a>
     <img
       style="
@@ -204,7 +202,8 @@
             <footer>
               <img src="~@/assets/mainPageImgs/footerLogo.png" />
               <div style="margin-top: 3vh">
-                <a class="footer-menu" href="/">首頁</a><span class="footer-line">|</span
+                <a class="footer-menu" href="/">首頁</a
+                ><span class="footer-line">|</span
                 ><a class="footer-menu" href="/About">關於周老師</a
                 ><span class="footer-line">|</span
                 ><a class="footer-menu" href="/Blog">良文共閱專區</a
@@ -229,7 +228,9 @@
           </b-col>
           <b-col class="col-1" style="margin-left: 8%; margin-top: 12vh">
             <a @click="scrollToTop()"
-              ><img src="~@/assets/mainPageImgs/toTop.png" style="width: 5.5vw; cursor: pointer;"
+              ><img
+                src="~@/assets/mainPageImgs/toTop.png"
+                style="width: 5.5vw; cursor: pointer"
             /></a>
           </b-col>
         </b-row>
@@ -313,6 +314,19 @@ export default {
 </script>
 
 <style>
+.frame-logo {
+  position: absolute;
+  margin-left: 2.8%;
+  margin-top: 3%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .frame-logo {
+    position: absolute;
+    width: 80px;
+  }
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
 }

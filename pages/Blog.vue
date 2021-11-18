@@ -16,7 +16,7 @@
     />
     <a style="width: 10%" href="/"
       ><img
-        style="position: absolute; margin-left: 2.8%; margin-top: 3%"
+        class="frame-logo"
         src="~@/assets/mainPageImgs/Frame.png"
     /></a>
     <b-col
@@ -302,6 +302,18 @@ export default {
 </script>
 
 <style>
+.frame-logo {
+  position: absolute;
+  margin-left: 2.8%;
+  margin-top: 3%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .frame-logo {
+    position: absolute;
+    width: 80px;
+  }
+}
 
 body {
   overflow-x: hidden;
