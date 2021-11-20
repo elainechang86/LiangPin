@@ -11,16 +11,7 @@
     <a style="width: 10%" href="/"
       ><img class="frame-logo" src="~@/assets/mainPageImgs/Frame.png"
     /></a>
-    <img
-      style="
-        position: absolute;
-        margin-top: 13%;
-        right: 48%;
-        width: 27%;
-        z-index: 100;
-      "
-      src="~@/assets/about/duen.png"
-    />
+    <img class="about-duen" src="~@/assets/about/duen.png" />
     <b-col
       class="col-12"
       style="
@@ -31,18 +22,15 @@
         z-index: 99;
       "
     >
-      <img
-        src="~@/assets/about/back.png"
-        style="width: 73vw; positive: relative; right: 0; z-index: 99"
-      />
+      <img class="about-back" />
       <p
-        class="vertical-word-about"
+        class="vertical-word-about none-small"
         style="left: 19%; position: absolute; top: 14%"
       >
         也許良品敦法是我在書法世界中的最終里程碑。
       </p>
       <p
-        class="vertical-word-about"
+        class="vertical-word-about none-small"
         style="left: 16%; position: absolute; top: 4%"
       >
         書法世界浩瀚無邊，書法之事樂趣無窮，
@@ -52,7 +40,10 @@
         ><img src="~@/assets/mainPageImgs/circle.svg" class="circle-blog"
       /></span>
     </b-col>
-    <b-col class="col-6 offset-4" style="margin-top: 3%; text-align: left">
+    <b-col
+      class="col-sm-6 offset-sm-4 col-12"
+      style="margin-top: 3%; text-align: left"
+    >
       <p class="topic">
         「良品」代表著良好品質、良好品格，如唐朝書法名家柳公權「心正則筆正」、「筆正則書正」的筆諫論，這是我時常告訴學生「人品為上、書法次之」的重要核心價值，因為書法絕不僅僅只是知識和技術的傳承，它更是一種德性的教育。
         <br />
@@ -60,7 +51,12 @@
         「敦法」代表著有厚度、有溫度、有法度的精神在做人和做事，這也是平台的核心精神，平台內會有許多關於書法的大小事，可能是藝術、可能是生活、可能是商品、可能是設計，我希望你能多看看，我相信能看到於書法世界裡不同視角美學。
       </p>
     </b-col>
-    <b-row style="margin-top: 42vh">
+    <img
+      class="none-big"
+      src="~@/assets/about/word.png"
+      style="width: 100vw; margin-top: 30px"
+    />
+    <b-row class="none-small" style="margin-top: 42vh">
       <b-col class="col-5 offset-2">
         <p class="poem">
           盛年不重來，一日難再晨；<br />
@@ -78,8 +74,29 @@
         <img src="~@/assets/about/color.png" class="color" />
       </b-col>
     </b-row>
+    <img
+      class="none-big"
+      src="~@/assets/about/color.png"
+      style="width: 100vw; margin-top: 50px"
+    />
+    <img
+      class="none-big"
+      src="~@/assets/about/word2.png"
+      style="width: 100vw; margin-top: 50px"
+    />
+    <b-row class="none-big" style="margin-top: 5vh">
+      <b-col class="col-12">
+        <p style="padding: 0 16px; font-size: 16px">
+          這是來自陶淵明《杂詩》的一段經典語錄，勉勵我們要把握光陰，不枉費青春的盛年，此詩意的內涵正是良品敦法網站所誕生的動力，在投入書法的三千世界當中約莫40年的光陰，與書法一起體會人生的達觀、樂觀、悲觀，書法對於我不僅是筆法、結構、氣力、章法布局等技巧，它更包含了我人生的經歷、對生命體悟、審美哲學觀和文化傳承的使命感。<br />
+          <br />點一盞心燈除了能照亮自己，也能溫暖別人<br />
+          將書法 透過不同的教育方式傳遞是我的使命 <br />
+          將書法 透過不同方式呈現生活化是我的轉折 <br />
+          將書法 變化性、可能性、藝術性做不同面向的探討實踐是我的期盼。
+        </p>
+      </b-col>
+    </b-row>
     <b-row style="margin-top: 12vh">
-      <b-col class="col-1 offset-1">
+      <b-col class="col-sm-1 offset-sm-1 col-7">
         <div>
           <p
             class="vertical-word price-title"
@@ -92,7 +109,7 @@
           /></span>
         </div>
       </b-col>
-      <b-col class="col-8 price">
+      <b-col class="col-sm-8 col-12 price">
         <p>
           曾任台中市書法學會理事長6年<br />
           曾任逢甲大學及靜宜大學書法社指導老師<br />
@@ -112,26 +129,26 @@
       </b-col>
     </b-row>
     <b-row style="margin-top: 8vh">
-      <b-col class="col-8 offset-2">
+      <b-col class="col-sm-8 offset-sm-2 offset-12">
         <b-carousel
           id="carousel-1"
           controls
           style="text-shadow: 1px 1px 2px #333"
         >
           <b-carousel-slide
-            img-src="https://i.imgur.com/lTmADaP.png"
+            img-src="~@/assets/about/carousel-top-1.png"
           ></b-carousel-slide>
 
-          <b-carousel-slide img-src="https://i.imgur.com/lTmADaP.png">
+          <b-carousel-slide img-src="~@/assets/about/carousel-top-1.png">
           </b-carousel-slide>
 
-          <b-carousel-slide img-src="https://i.imgur.com/lTmADaP.png">
+          <b-carousel-slide img-src="~@/assets/about/carousel-top-1.png">
           </b-carousel-slide>
         </b-carousel>
       </b-col>
     </b-row>
     <b-row style="margin-top: 24vh">
-      <b-col class="col-1 offset-1">
+      <b-col class="col-sm-1 offset-sm-1 col-7">
         <div>
           <p
             class="vertical-word price-title"
@@ -144,7 +161,7 @@
           /></span>
         </div>
       </b-col>
-      <b-col class="col-10" style="left: -8%; position: relative">
+      <b-col class="col-10 none-small" style="left: -8%; position: relative">
         <div id="b">
           <div class="horizontal-scroll-wrapper rectangles flexcroll">
             <img src="~@/assets/about/carousel-1-1.png" />
@@ -157,7 +174,10 @@
       </b-col>
     </b-row>
     <b-row style="margin-top: 4vh">
-      <b-col class="col-10 offset-1" style="left: -8%; position: relative">
+      <b-col
+        class="col-10 offset-1 none-small"
+        style="left: -8%; position: relative"
+      >
         <div id="c">
           <div class="horizontal-scroll-wrapper rectangles flexcroll">
             <img src="~@/assets/about/carousel-2-1.png" />
@@ -167,6 +187,26 @@
             <img src="~@/assets/about/carousel-2-1.png" />
           </div>
         </div>
+      </b-col>
+    </b-row>
+    <b-row class="none-big" style="padding: 0 16px">
+      <b-col class="col-12">
+        <img src="~@/assets/about/carousel-1-1.png" class="carousel-img" />
+        <p>太平光隆國小</p>
+        <img src="~@/assets/about/carousel-1-2.png" class="carousel-img" />
+        <p>台中洲際棒球場</p>
+        <b-row class="col-12" style="padding: 0; margin: 0">
+          <b-col class="col-6" style="padding: 0 8px 0 0; margin: 0"
+            ><img src="~@/assets/about/carousel-2-1.png" class="carousel-img" />
+            <p>精明一街</p></b-col
+          >
+          <b-col class="col-6" style="padding: 0 0 0 8px; margin: 0"
+            ><img src="~@/assets/about/carousel-1-3.png" class="carousel-img" />
+            <p>台中文學公園</p></b-col
+          >
+        </b-row>
+        <img src="~@/assets/about/carousel-2-2.png" class="carousel-img" />
+        <p>台中國際機場</p>
       </b-col>
     </b-row>
     <b-row>
@@ -187,7 +227,7 @@
         </a>
       </b-col>
     </b-row>
-    <b-row style="margin: 0; padding: 0">
+    <b-row class="footer-big" style="margin: 0; padding: 0">
       <b-col
         class="col-12"
         style="
@@ -231,6 +271,59 @@
               ><img
                 src="~@/assets/mainPageImgs/toTop.png"
                 style="width: 5.5vw; cursor: pointer"
+            /></a>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row class="footer-small" style="margin: 0; padding: 0">
+      <b-col
+        class="col-12"
+        style="
+          height: 35vh;
+          margin: 8vh 0 0 0;
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 0;
+        "
+      >
+        <b-row>
+          <b-col class="col-12" style="margin-left: 5%; margin-top: 5vh">
+            <footer>
+              <img
+                src="~@/assets/mainPageImgs/footerLogo.png"
+                style="width: 60vw"
+              />
+              <div style="margin-top: 3vh">
+                <a class="footer-menu" href="/">首頁</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/About">關於周老師</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/Blog">良文共閱專區</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/Portfolio">敦雅閣藝廊</a>
+              </div>
+              <div style="margin-top: 25px;">
+                <a class="footer-menu">FOLLOW US ON</a
+                ><a
+                  ><img
+                    src="~@/assets/mainPageImgs/facebook.png"
+                    class="footer-icon" /></a
+                ><a
+                  ><img
+                    src="~@/assets/mainPageImgs/instagram.png"
+                    class="footer-icon"
+                /></a>
+              </div>
+              <p class="copyright">
+                © 2021 Copyright 良品敦法 Liang Pin Dun Fa
+              </p>
+            </footer>
+          </b-col>
+          <b-col class="col-1" style="position: absolute; right: 70px; bottom: 45px">
+            <a @click="scrollToTop()"
+              ><img
+                src="~@/assets/mainPageImgs/toTop.png"
+                style="width: 60px; cursor: pointer"
             /></a>
           </b-col>
         </b-row>
@@ -356,6 +449,21 @@ export default {
 
 .horizontal-scroll-wrapper img:hover {
   -webkit-filter: grayscale(0);
+}
+
+.about-duen {
+  position: absolute;
+  margin-top: 13%;
+  right: 48%;
+  width: 27%;
+  z-index: 100;
+}
+
+.about-back {
+  width: 73vw;
+  right: 0;
+  z-index: 99;
+  content: url("~@/assets/about/back.png");
 }
 
 #b {
@@ -582,5 +690,110 @@ export default {
   line-height: 140%;
   opacity: 0.75;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-back {
+    margin-top: 25%;
+    width: 100vw;
+    content: url("~@/assets/about/back_mobile.png");
+  }
+  .about-duen {
+    position: absolute;
+    margin-top: 65%;
+    right: none;
+    left: -20px;
+    width: 260px;
+    z-index: 100;
+  }
+  .circle-blog {
+    right: 16px;
+    top: 28%;
+    width: 60px;
+  }
+  .vertical-word {
+    right: 36px;
+    top: 28%;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+    letter-spacing: 6px;
+  }
+  .topic {
+    margin-top: 60px;
+    z-index: 101;
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    position: relative;
+  }
+  .none-small {
+    display: none;
+  }
+  .main-row {
+    background-image: none;
+  }
+  .circle-price {
+    position: absolute;
+    width: 60px;
+    padding-bottom: -20px;
+    top: -15px;
+    left: 70%;
+  }
+  .circle-coop {
+    position: absolute;
+    width: 60px;
+    padding-bottom: -20px;
+    top: -15px;
+    left: 70%;
+  }
+  .price {
+    text-align: left;
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 5vh;
+  }
+  .price p {
+    padding: 0 16px;
+  }
+  .carousel-img {
+    width: 100%;
+    -webkit-filter: grayscale(1);
+  }
+  .carousel-img:hover {
+    -webkit-filter: grayscale(0);
+  }
+  .arrow {
+    position: inherit;
+    height: 16px;
+    margin-top: 20px;
+    right: -30px;
+  }
+  .circle-contact {
+    left: 8%;
+    width: 60px;
+  }.footer-big {
+    display: none;
+  }
+  .footer-menu {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+  }
+  .footer-line {
+    margin: 0 2%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .none-big {
+    display: none;
+  }
+  .footer-small {
+    display: none;
+  }
 }
 </style>
