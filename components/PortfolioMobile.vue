@@ -1,0 +1,145 @@
+<template>
+  <b-row class="col-12 main-row-port">
+    <img class="port-ping" src="~@/assets/portfolio/Vector.svg" />
+    <a style="width: 10%" href="/"
+      ><img class="frame-logo" src="~@/assets/mainPageImgs/Frame.png"
+    /></a>
+    <div>
+      <p class="vertical-word-port">敦雅閣藝廊</p>
+      <span><img src="~@/assets/about/circle.svg" class="circle-port" /></span>
+    </div>
+    <b-row>
+      <b-col class="col-sm-5 offset-sm-0 col-5 offset-6 year-selection">
+        <div class="btn-group-vertical">
+          <button
+            type="button"
+            class="btn year-btn year-btn-selected"
+            v-on:click="
+              AisHidden = false;
+              BisHidden = true;
+              CisHidden = true;
+            "
+          >
+            2008-2010
+          </button>
+          <button
+            type="button"
+            class="btn year-btn"
+            v-on:click="
+              AisHidden = true;
+              BisHidden = false;
+              CisHidden = true;
+            "
+          >
+            2011-2015
+          </button>
+          <button
+            type="button"
+            class="btn year-btn"
+            v-on:click="
+              AisHidden = true;
+              BisHidden = true;
+              CisHidden = false;
+            "
+          >
+            2016-2020
+          </button>
+        </div>
+      </b-col>
+      <b-col class="col-sm-5 col-12 year-card">
+        <div v-show="!AisHidden">
+          <b-row style="margin-top: 5%">
+            <b-col class="col-6 col-sm-4 port-col"
+              ><img src="~@/assets/portfolio/2008-1.png" style="width: 90%" />
+              <img
+                src="~@/assets/portfolio/2008-2.png"
+                style="width: 90%; margin-top: 8%"
+            /></b-col>
+            <b-col class="col-6 col-sm-4" style="text-align: left">
+              <img src="~@/assets/portfolio/2008-3.png" style="width: 70%"
+            /></b-col>
+            <a>
+              <img src="~@/assets/portfolio/arrow.png" class="arrow-port" />
+              <span
+                ><p class="more-post-port more-post-port-smallscreen">查看全部</p>
+                <img
+                  src="~@/assets/mainPageImgs/circle.svg"
+                  class="circle-port-small circle-port-smallscreen"
+              /></span>
+            </a>
+          </b-row>
+        </div>
+        <div v-show="!BisHidden">
+          <img
+            src="~@/assets/portfolio/2011-1.png"
+            style="width: 100%; margin-top: 5%; padding: 0 15px"
+          />
+          <b-row style="margin-top: 5%; padding: 0 15px">
+            <b-col class="col-6" style="text-align: right">
+              <img src="~@/assets/portfolio/2011-2.png" style="width: 100%"
+            /></b-col>
+            <b-col class="col-6" style="text-align: left">
+              <img src="~@/assets/portfolio/2011-3.png" style="width: 100%"
+            /></b-col>
+            <a>
+              <img src="~@/assets/portfolio/arrow.png" class="arrow-port" />
+              <span
+                ><p class="more-post-port more-post-port-smallscreen">查看全部</p>
+                <img
+                  src="~@/assets/mainPageImgs/circle.svg"
+                  class="circle-port-small circle-port-smallscreen"
+              /></span>
+            </a>
+          </b-row>
+        </div>
+        <div v-show="!CisHidden">
+          <b-row style="margin-top: 10%; padding: 0 15px">
+            <b-col class="col-6" style="text-align: right">
+              <img src="~@/assets/portfolio/2016-1.png" style="width: 100%"
+            /></b-col>
+            <b-col class="col-6" style="text-align: left">
+              <img src="~@/assets/portfolio/2016-2.png" style="width: 100%"
+            /></b-col>
+            <a>
+              <img src="~@/assets/portfolio/arrow.png" class="arrow-port" />
+              <span
+                ><p class="more-post-port more-post-port-smallscreen">查看全部</p>
+                <img
+                  src="~@/assets/mainPageImgs/circle.svg"
+                  class="circle-port-small circle-port-smallscreen"
+              /></span>
+            </a>
+          </b-row>
+        </div>
+      </b-col>
+    </b-row>
+  </b-row>
+</template>
+    
+<script>
+import $ from "jquery";
+
+export default {
+  name: "Portfolio",
+  data() {
+    return {
+      AisHidden: false,
+      BisHidden: true,
+      CisHidden: true,
+    };
+  },
+  mounted() {
+    $(".year-btn").click(function (event) {
+      $(this)
+        .addClass("year-btn-selected")
+        .siblings()
+        .removeClass("year-btn-selected");
+    });
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+  },
+};
+</script>

@@ -302,7 +302,7 @@
                 ><span class="footer-line">|</span
                 ><a class="footer-menu" href="/Portfolio">敦雅閣藝廊</a>
               </div>
-              <div style="margin-top: 25px;">
+              <div style="margin-top: 25px">
                 <a class="footer-menu">FOLLOW US ON</a
                 ><a
                   ><img
@@ -319,7 +319,10 @@
               </p>
             </footer>
           </b-col>
-          <b-col class="col-1" style="position: absolute; right: 70px; bottom: 45px">
+          <b-col
+            class="col-1"
+            style="position: absolute; right: 70px; bottom: 45px"
+          >
             <a @click="scrollToTop()"
               ><img
                 src="~@/assets/mainPageImgs/toTop.png"
@@ -449,6 +452,13 @@ export default {
 
 .horizontal-scroll-wrapper img:hover {
   -webkit-filter: grayscale(0);
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 50%;
 }
 
 .about-duen {
@@ -596,17 +606,17 @@ export default {
 
 .circle-price {
   position: absolute;
-  left: 15%;
-  top: 248%;
-  width: 6%;
+  left: 54%;
+  bottom: 88%;
+  width: 80px;
   mix-blend-mode: difference;
 }
 
 .circle-coop {
   position: absolute;
-  left: 15%;
-  top: 395%;
-  width: 6%;
+  left: 54%;
+  bottom: 75%;
+  width: 80px;
   mix-blend-mode: difference;
 }
 
@@ -774,7 +784,8 @@ export default {
   .circle-contact {
     left: 8%;
     width: 60px;
-  }.footer-big {
+  }
+  .footer-big {
     display: none;
   }
   .footer-menu {

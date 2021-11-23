@@ -4,23 +4,12 @@
       style="position: absolute; margin-top: 22%; width: 83%"
       src="~@/assets/blog/web.png"
     />
-    <img
-      style="
-        position: absolute;
-        margin-left: 15%;
-        margin-top: 16%;
-        width: 25%;
-        z-index: 100;
-      "
-      src="~@/assets/mainPageImgs/Liang.png"
-    />
+    <img class="blog-Liang" src="~@/assets/mainPageImgs/Liang.png" />
     <a style="width: 10%" href="/"
-      ><img
-        class="frame-logo"
-        src="~@/assets/mainPageImgs/Frame.png"
+      ><img class="frame-logo" src="~@/assets/mainPageImgs/Frame.png"
     /></a>
     <b-col
-      class="col-12"
+      class="col-sm-12 col-2 offset-10"
       style="
         margin-top: 7%;
         text-align: right;
@@ -29,19 +18,13 @@
         z-index: 99;
       "
     >
-      <img
-        src="~@/assets/blog/back.png"
-        style="width: 73vw; positive: relative; right: 0; z-index: 99"
-      />
-      <p class="vertical-word">良文共閱專區</p>
+      <img class="blog-top" />
+      <p class="vertical-word-blog">良文共閱專區</p>
       <span
         ><img src="~@/assets/mainPageImgs/circle.svg" class="circle-blog"
       /></span>
     </b-col>
-    <b-col
-      class="col-7 offset-5"
-      style="margin-top: 3%; padding-left: 5%; text-align: left"
-    >
+    <b-col class="col-sm-7 offset-sm-5 col-12 blog-topic">
       <p class="topic">點一盞心燈除了能照亮自己，也能溫暖別人</p>
       <p class="topic">將書法 透過不同的教育方式傳遞是我的使命</p>
       <p class="topic">將書法 透過不同方式呈現生活化是我的轉折</p>
@@ -50,15 +33,7 @@
       </p>
     </b-col>
     <b-row>
-      <b-row
-        style="
-          width: 100%;
-          text-align: center;
-          margin-top: 15%;
-          padding: 0 34%;
-          z-index: 99;
-        "
-      >
+      <b-row class="bottom-row">
         <b-col class="blog-header blog-header-selected"
           ><a href="/">免費資源</a></b-col
         >
@@ -66,34 +41,34 @@
         <b-col class="blog-header"><a href="/">比賽資訊</a></b-col>
         <b-col class="blog-header"><a href="/">老師經驗談</a></b-col>
       </b-row>
-      <b-col class="col-9 offset-1" style="margin-top: 2%">
-        <b-row class="col-12" style="margin-left: 8%">
-          <b-col>
+      <b-col class="col-sm-9 offset-sm-1 col-12" style="margin-top: 2%">
+        <b-row class="col-12 margin-big">
+          <b-col class="col-12 col-sm-4">
             <a href="/Post">
-            <b-card
-              class="post-card"
-              overlay
-              img-src="~@/assets/mainPageImgs/post1.png"
-              img-alt="Card Image"
-              text-variant="white"
-            >
-              <b-card-body>
-                <div class="card-mask" />
-                <b-card-title class="card-text-top"
-                  >學習書法必須經歷的3個歷程
-                  <div style="position: relative; height: 10px" />
-                  <span style="card-text-middle"
-                    >自從甲骨文被應用以來，書法的字體經歷了由篆書到隸書、草書、行書、楷書發展階段。</span
-                  ></b-card-title
-                >
-                <b-card-text class="card-text-bottom">
-                  July 8, 2020
-                </b-card-text>
-              </b-card-body>
-            </b-card>
+              <b-card
+                class="post-card"
+                overlay
+                img-src="~@/assets/mainPageImgs/post1.png"
+                img-alt="Card Image"
+                text-variant="white"
+              >
+                <b-card-body>
+                  <div class="card-mask" />
+                  <b-card-title class="card-text-top"
+                    >學習書法必須經歷的3個歷程
+                    <div style="position: relative; height: 10px" />
+                    <span style="card-text-middle"
+                      >自從甲骨文被應用以來，書法的字體經歷了由篆書到隸書、草書、行書、楷書發展階段。</span
+                    ></b-card-title
+                  >
+                  <b-card-text class="card-text-bottom">
+                    July 8, 2020
+                  </b-card-text>
+                </b-card-body>
+              </b-card>
             </a>
           </b-col>
-          <b-col>
+          <b-col class="col-12 col-sm-4">
             <b-card
               class="post-card"
               overlay
@@ -116,7 +91,7 @@
               </b-card-body>
             </b-card>
           </b-col>
-          <b-col>
+          <b-col class="col-12 col-sm-4">
             <b-card
               class="post-card"
               overlay
@@ -143,8 +118,8 @@
             </b-card>
           </b-col>
         </b-row>
-        <b-row class="col-12" style="margin-left: 8%; margin-top: 3%">
-          <b-col>
+        <b-row class="col-12 margin-big">
+          <b-col class="col-12 col-sm-4">
             <b-card
               class="post-card"
               overlay
@@ -167,7 +142,7 @@
               </b-card-body>
             </b-card>
           </b-col>
-          <b-col>
+          <b-col class="col-12 col-sm-4">
             <b-card
               class="post-card"
               overlay
@@ -190,7 +165,7 @@
               </b-card-body>
             </b-card>
           </b-col>
-          <b-col>
+          <b-col class="col-12 col-sm-4">
             <b-card
               class="post-card"
               overlay
@@ -219,7 +194,7 @@
         </b-row>
       </b-col>
     </b-row>
-    <b-row style="margin: 0; padding: 0">
+    <b-row class="footer-big" style="margin: 0; padding: 0">
       <b-col
         class="col-12"
         style="
@@ -234,7 +209,8 @@
             <footer>
               <img src="~@/assets/mainPageImgs/footerLogo.png" />
               <div style="margin-top: 3vh">
-                <a class="footer-menu" href="/">首頁</a><span class="footer-line">|</span
+                <a class="footer-menu" href="/">首頁</a
+                ><span class="footer-line">|</span
                 ><a class="footer-menu" href="/About">關於周老師</a
                 ><span class="footer-line">|</span
                 ><a class="footer-menu" href="/Blog">良文共閱專區</a
@@ -259,7 +235,65 @@
           </b-col>
           <b-col class="col-1" style="margin-left: 8%; margin-top: 12vh">
             <a @click="scrollToTop()"
-              ><img src="~@/assets/mainPageImgs/toTop.png" style="width: 5.5vw; cursor: pointer;"
+              ><img
+                src="~@/assets/mainPageImgs/toTop.png"
+                style="width: 5.5vw; cursor: pointer"
+            /></a>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row class="footer-small" style="margin: 0; padding: 0">
+      <b-col
+        class="col-12"
+        style="
+          height: 35vh;
+          margin: 8vh 0 0 0;
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 0;
+        "
+      >
+        <b-row>
+          <b-col class="col-12" style="margin-left: 5%; margin-top: 5vh">
+            <footer>
+              <img
+                src="~@/assets/mainPageImgs/footerLogo.png"
+                style="width: 60vw"
+              />
+              <div style="margin-top: 3vh">
+                <a class="footer-menu" href="/">首頁</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/About">關於周老師</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/Blog">良文共閱專區</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/Portfolio">敦雅閣藝廊</a>
+              </div>
+              <div style="margin-top: 25px">
+                <a class="footer-menu">FOLLOW US ON</a
+                ><a
+                  ><img
+                    src="~@/assets/mainPageImgs/facebook.png"
+                    class="footer-icon" /></a
+                ><a
+                  ><img
+                    src="~@/assets/mainPageImgs/instagram.png"
+                    class="footer-icon"
+                /></a>
+              </div>
+              <p class="copyright">
+                © 2021 Copyright 良品敦法 Liang Pin Dun Fa
+              </p>
+            </footer>
+          </b-col>
+          <b-col
+            class="col-1"
+            style="position: absolute; right: 70px; bottom: 45px"
+          >
+            <a @click="scrollToTop()"
+              ><img
+                src="~@/assets/mainPageImgs/toTop.png"
+                style="width: 60px; cursor: pointer"
             /></a>
           </b-col>
         </b-row>
@@ -293,11 +327,11 @@ export default {
       ],
     };
   },
-  methods:{
+  methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-  }
+  },
 };
 </script>
 
@@ -308,11 +342,12 @@ export default {
   margin-top: 3%;
 }
 
-@media only screen and (max-width: 1000px) {
-  .frame-logo {
-    position: absolute;
-    width: 80px;
-  }
+.blog-Liang {
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 16%;
+  width: 25%;
+  z-index: 100;
 }
 
 body {
@@ -330,25 +365,43 @@ body {
   overflow: hidden;
 }
 
-.vertical-word {
+.vertical-word-blog {
   writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
   text-orientation: upright;
-  position: absolute;
-  right: 14%;
-  top: 15%;
+  position: relative;
+  right: 0;
+  top: -320px;
   font-family: "Noto Serif JP";
   font-weight: bold;
   font-size: 40px;
+  z-index: 99;
   line-height: 125%;
   letter-spacing: 10px;
   color: #ffffff;
 }
 
+.blog-top {
+  content: url("~@/assets/blog/back.png");
+  position: relative;
+  top: 50px;
+  width: 74vw;
+  right: 80%;
+  z-index: 99;
+}
+
+.blog-topic {
+  margin-top: 8%;
+  padding-left: 5%;
+  text-align: left;
+}
+
 .circle-blog {
-  position: absolute;
-  right: 14%;
-  top: 13%;
+  position: relative;
+  right: 94vw;
+  top: -643px;
   width: 6.5vw;
+  z-index: 999;
   mix-blend-mode: difference;
   transform: rotate(90deg);
 }
@@ -364,6 +417,14 @@ body {
   margin: 0;
 }
 
+.bottom-row {
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+  padding: 0 34%;
+  z-index: 99;
+}
+
 .blog-header {
   font-family: Poppins;
   font-style: normal;
@@ -376,6 +437,10 @@ body {
   letter-spacing: 0.75px;
 
   color: rgba(0, 0, 0, 0.5);
+}
+
+.margin-big {
+  margin-left: 8%;
 }
 
 .blog-header-selected {
@@ -454,5 +519,95 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .frame-logo {
+    position: absolute;
+    width: 80px;
+  }
+
+  .blog-Liang {
+    content: url("~@/assets/blog/white-Liang.png");
+    position: absolute;
+    margin-top: 70%;
+    right: none;
+    left: -50px;
+    width: 166px;
+    z-index: 100;
+  }
+
+  .blog-top {
+    position: absolute;
+    top: 100px;
+    width: 100vw;
+    right: 0;
+    z-index: 99;
+    content: url("~@/assets/blog/blog-back.png");
+  }
+  .vertical-word-blog {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: relative;
+    right: 20%;
+    top: 130px;
+    z-index: 99;
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: #ffffff;
+  }
+  .circle-blog {
+    position: relative;
+    right: 45%;
+    top: -70px;
+    z-index: 99;
+    width: 60px;
+  }
+
+  .blog-topic {
+    position: relative;
+    margin-top: 53%;
+    z-index: 999;
+  }
+  .topic {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.75px;
+    color: #000000;
+  }
+  .bottom-row {
+    display: flex;
+    flex-wrap: unset;
+    padding: 0px 40px;
+    width: -webkit-fill-available;
+  }
+  .blog-header {
+    padding: 0;
+    font-size: 16px;
+  }
+  .margin-big {
+    margin-left: 0;
+  }
+  .footer-big {
+    display: none;
+  }
+  .footer-menu {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+  }
+  .footer-line {
+    margin: 0 2%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .none-big {
+    display: none;
+  }
+  .footer-small {
+    display: none;
+  }
 }
 </style>

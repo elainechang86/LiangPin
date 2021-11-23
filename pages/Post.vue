@@ -1,19 +1,24 @@
 <template>
   <b-row class="col-12 main-row">
     <a style="width: 10%" href="/"
-      ><img
-        class="frame-logo"
-        src="~@/assets/mainPageImgs/Frame.png"
+      ><img class="frame-logo" src="~@/assets/mainPageImgs/Frame.png"
     /></a>
-    <b-row class="col-12">
-      <b-col class="col-8 offset-2" style="margin-top: 5%">
-        <a class="return-btn" href="/Blog">&lt;&nbsp;&nbsp;&nbsp;返回良文共閱專區</a>
+    <b-row class="col-12" style="padding: 0; margin: 0">
+      <b-col class="col-sm-8 offset-sm-2 col-12 post-top">
+        <a class="return-btn" href="/Blog"
+          >&lt;&nbsp;&nbsp;&nbsp;返回良文共閱專區</a
+        >
         <br />
-        <div class="title">
+        <div class="title none-small">
           <span>學習書法必須經歷的3個歷程</span>
           <span class="date">{{ date }}</span>
         </div>
-        <img class="post-img" src="~@/assets/post/pic.png" />
+        <img class="post-img none-small" src="~@/assets/post/pic.png" />
+        <img class="post-img none-big" src="~@/assets/post/pic.png" />
+        <div class="title none-big">
+          <span>學習書法必須經歷的3個歷程</span>
+          <span class="date">{{ date }}</span>
+        </div>
         <div class="paragraph">
           <p class="first-part">
             自從甲骨文被應用以來，書法的字體經歷了由篆書到隸書、草書、行書、楷書發展階段。這2300多年下來，每個階段都產生了數量眾多的書法家和書法作品，也讓書法成為中華文化一門成熟的藝術，其「積澱與傳承的過程」是造就書法能發展至今的基石。
@@ -25,7 +30,7 @@
             <br />
             有人認為書法高深莫測，極其神秘，神不可徵、形以難表、好事難成，甚至有些人認為書法是需要有天分才有辦法學習，但學習書法就跟學習其他技藝一樣，具備熱忱和方法就可以入門，反而是學習中的堅持和思考是決定成果的深度與廣度，以下分享學習書法必須經歷的3個歷程。
           </p>
-          <table style="margin: 8vh 0">
+          <table class="none-small" style="margin: 8vh 0">
             <tbody>
               <tr>
                 <td>
@@ -43,6 +48,14 @@
               </tr>
             </tbody>
           </table>
+          <b-row class="none-big">
+            <b-col class="col-12">
+              <img src="~@/assets/post/pic1.png" class="picture" />
+              <p>圖1、書法發展歷史(由左至右)</p>
+              <img src="~@/assets/post/pic2.png" class="picture" />
+              <p>圖2、孫過庭草書《書譜》</p>
+            </b-col>
+          </b-row>
           <p class="second-part-title">第一個歷程：以師為師</p>
           <p class="second-part">
             書法可謂一門功夫，用同樣的紙張筆墨，有的人寫出美妙書法形象，有的人雖然臨摹成字帖上的字跡卻並不生動，有的人根本連書寫都不成形象，因為裡頭不僅蘊含字裡行間的設計技術，還包含運筆書寫功夫的氣力掌握，因此學習書法正確的歷程，一定是需要拜師，不但要拜師，還要廣拜師，拜名師，舉例古人王羲之的書法除了家學相傳，還受到衛夫人啟蒙、還向張芝學草、向鍾繇學楷。書聖尚且如此，在學習層面我們應該效仿這樣的精神。
@@ -73,22 +86,19 @@
         </div>
       </b-col>
     </b-row>
-    <b-row>
-      <b-col
-        class="col-10 offset-1"
-        style="padding: 0 6%; margin-top: 8%; text-align: center"
-      >
+    <b-row class="more-post-row">
+      <b-col class="col-sm-10 offset-sm-1 col-12 more-post-col">
         <a>
           <p class="more-post-post">其他文章</p>
           <span
-            ><img src="~@/assets/mainPageImgs/circle.svg" class="circle"
+            ><img src="~@/assets/mainPageImgs/circle.svg" class="post-circle"
           /></span>
         </a>
         <b-row
           class="col-12"
           style="margin-left: 1%; text-align: left; margin-top: 5vh"
         >
-          <b-col>
+          <b-col class="col-sm-4 col-12">
             <b-card
               class="post-card"
               overlay
@@ -111,7 +121,7 @@
               </b-card-body>
             </b-card>
           </b-col>
-          <b-col>
+          <b-col class="col-sm-4 col-12">
             <b-card
               class="post-card"
               overlay
@@ -134,7 +144,7 @@
               </b-card-body>
             </b-card>
           </b-col>
-          <b-col>
+          <b-col class="col-sm-4 col-12">
             <b-card
               class="post-card"
               overlay
@@ -163,7 +173,7 @@
         </b-row>
       </b-col>
     </b-row>
-    <b-row style="margin: 0; padding: 0">
+    <b-row class="footer-big" style="margin: 0; padding: 0">
       <b-col
         class="col-12"
         style="
@@ -207,6 +217,62 @@
               ><img
                 src="~@/assets/mainPageImgs/toTop.png"
                 style="width: 5.5vw; cursor: pointer"
+            /></a>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row class="footer-small" style="margin: 0; padding: 0">
+      <b-col
+        class="col-12"
+        style="
+          height: 35vh;
+          margin: 8vh 0 0 0;
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 0;
+        "
+      >
+        <b-row>
+          <b-col class="col-12" style="margin-left: 5%; margin-top: 5vh">
+            <footer>
+              <img
+                src="~@/assets/mainPageImgs/footerLogo.png"
+                style="width: 60vw"
+              />
+              <div style="margin-top: 3vh">
+                <a class="footer-menu" href="/">首頁</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/About">關於周老師</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/Blog">良文共閱專區</a
+                ><span class="footer-line">|</span
+                ><a class="footer-menu" href="/Portfolio">敦雅閣藝廊</a>
+              </div>
+              <div style="margin-top: 25px">
+                <a class="footer-menu">FOLLOW US ON</a
+                ><a
+                  ><img
+                    src="~@/assets/mainPageImgs/facebook.png"
+                    class="footer-icon" /></a
+                ><a
+                  ><img
+                    src="~@/assets/mainPageImgs/instagram.png"
+                    class="footer-icon"
+                /></a>
+              </div>
+              <p class="copyright">
+                © 2021 Copyright 良品敦法 Liang Pin Dun Fa
+              </p>
+            </footer>
+          </b-col>
+          <b-col
+            class="col-1"
+            style="position: absolute; right: 70px; bottom: 45px"
+          >
+            <a @click="scrollToTop()"
+              ><img
+                src="~@/assets/mainPageImgs/toTop.png"
+                style="width: 60px; cursor: pointer"
             /></a>
           </b-col>
         </b-row>
@@ -259,13 +325,9 @@ export default {
   margin-top: 3%;
 }
 
-@media only screen and (max-width: 1000px) {
-  .frame-logo {
-    position: absolute;
-    width: 80px;
-  }
+.post-top {
+  margin-top: 5%;
 }
-
 
 body {
   overflow-x: hidden;
@@ -290,6 +352,7 @@ body {
   line-height: 150%;
   letter-spacing: 0.75px;
   color: #6e7191;
+  padding: 0 15px;
 }
 
 .title {
@@ -304,6 +367,7 @@ body {
   letter-spacing: 1px;
   color: #14142b;
   margin-top: 2vh;
+  padding: 0 15px;
 }
 
 .date {
@@ -375,6 +439,12 @@ td {
   color: #6e7191;
 }
 
+.more-post-col {
+  padding: 0 6%;
+  margin-top: 8%;
+  text-align: center;
+}
+
 .paragraph-btn {
   font-family: Poppins;
   font-size: 16px;
@@ -386,7 +456,7 @@ td {
   margin-right: 10px;
 }
 
-.circle {
+.post-circle {
   width: 100px;
   mix-blend-mode: difference;
   position: relative;
@@ -477,5 +547,97 @@ td {
 a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .frame-logo {
+    position: absolute;
+    width: 80px;
+  }
+  .post-top {
+    margin-top: 15vh;
+    padding: 0;
+  }
+  .post-img {
+    width: 100vw;
+  }
+  .title {
+    font-family: Noto Serif JP;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 1px;
+    color: #14142b;
+    padding-right: 0;
+    margin-top: 40px;
+  }
+  .date {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.75px;
+    color: #6e7191;
+    right: auto;
+    left: 15px;
+    margin-top: 36px;
+  }
+  .paragraph {
+    padding: 0 15px;
+  }
+  .picture {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .more-post-row {
+    display: block;
+  }
+  .more-post-col {
+    padding: 0;
+    margin-top: 8%;
+    text-align: center;
+  }
+  .post-card {
+    height: 280px;
+    margin-bottom: 12px;
+    display: inline-table;
+  }
+  .card-text-top {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+  .card-text-top span {
+    font-size: 14px;
+  }
+  .more-post-post {
+    font-size: 24px;
+    left: 35%;
+  }
+  .post-circle {
+    width: 60px;
+    left: -4%;
+  }
+  .footer-big {
+    display: none;
+  }
+  .footer-menu {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+  }
+  .footer-line {
+    margin: 0 2%;
+  }
+  .none-small {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .none-big {
+    display: none;
+  }
+  .footer-small {
+    display: none;
+  }
 }
 </style>

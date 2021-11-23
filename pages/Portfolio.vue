@@ -1,188 +1,37 @@
 <template>
-  <b-row class="col-12 main-row-port">
-    <img
-      style="position: fixed; right: 0; height: 70%; width: 60%"
-      src="~@/assets/portfolio/web.png"
-    />
-    <img
-      style="position: fixed; top: 70%; right: 0; width: 60%"
-      src="~@/assets/portfolio/web.png"
-    />
-    <img
-      style="
-        position: fixed;
-        margin-left: 0;
-        margin-top: 20%;
-        width: 25%;
-        padding: 0;
-        z-index: 100;
-      "
-      src="~@/assets/portfolio/ping.png"
-    />
-    <a style="width: 10%" href="/"
-      ><img
-        class="frame-logo"
-        src="~@/assets/mainPageImgs/Frame.png"
-    /></a>
-    <div>
-      <p class="vertical-word-port">敦雅閣藝廊</p>
-      <span><img src="~@/assets/about/circle.svg" class="circle-port" /></span>
-    </div>
-    <b-row>
-      <b-col
-        class="col-5"
-        style="
-          text-align: right;
-          padding: 0;
-          position: relative;
-          z-index: 99;
-          height: 95vh;
-          line-height: 96vh;
-        "
-      >
-        <div class="btn-group-vertical">
-          <button
-            type="button"
-            class="btn year-btn year-btn-selected"
-            v-on:click="
-              AisHidden = false;
-              BisHidden = true;
-              CisHidden = true;
-            "
-          >
-            2008-2010
-          </button>
-          <button
-            type="button"
-            class="btn year-btn"
-            v-on:click="
-              AisHidden = true;
-              BisHidden = false;
-              CisHidden = true;
-            "
-          >
-            2011-2015
-          </button>
-          <button
-            type="button"
-            class="btn year-btn"
-            v-on:click="
-              AisHidden = true;
-              BisHidden = true;
-              CisHidden = false;
-            "
-          >
-            2016-2020
-          </button>
-        </div>
-      </b-col>
-      <b-col
-        class="col-5"
-        style="
-          text-align: right;
-          padding: 0;
-          position: relative;
-          z-index: 99;
-          height: 95vh;
-        "
-      >
-        <transition name="slide">
-          <div v-show="!AisHidden">
-            <b-row style="margin-top: 5%">
-              <b-col style="margin-left: 10vw; text-align: right"
-                ><img src="~@/assets/portfolio/2008-1.png" style="width: 90%" />
-                <img
-                  src="~@/assets/portfolio/2008-2.png"
-                  style="width: 90%; margin-top: 8%"
-              /></b-col>
-              <b-col style="text-align: left">
-                <img src="~@/assets/portfolio/2008-3.png" style="width: 70%"
-              /></b-col>
-              <a>
-                <img src="~@/assets/portfolio/arrow.png" class="arrow-port" />
-                <span
-                  ><p class="more-post-port">查看全部</p>
-                  <img
-                    src="~@/assets/mainPageImgs/circle.svg"
-                    class="circle-port-small"
-                /></span>
-              </a>
-            </b-row>
-          </div>
-        </transition>
-        <transition name="slide">
-          <div v-show="!BisHidden">
-            <img
-              src="~@/assets/portfolio/2011-1.png"
-              style="width: 80%; margin-top: 5%"
-            />
-            <b-row style="margin-top: 5%">
-              <b-col style="margin-left: 10vw; text-align: right">
-                <img src="~@/assets/portfolio/2011-2.png" style="width: 100%"
-              /></b-col>
-              <b-col style="text-align: left">
-                <img src="~@/assets/portfolio/2011-3.png" style="width: 100%"
-              /></b-col>
-              <a>
-                <img src="~@/assets/portfolio/arrow.png" class="arrow-port" />
-                <span
-                  ><p class="more-post-port">查看全部</p>
-                  <img
-                    src="~@/assets/mainPageImgs/circle.svg"
-                    class="circle-port-small"
-                /></span>
-              </a>
-            </b-row>
-          </div>
-        </transition>
-        <transition name="slide">
-          <div v-show="!CisHidden">
-            <b-row style="margin-top: 10%">
-              <b-col style="margin-left: 10vw; text-align: right">
-                <img src="~@/assets/portfolio/2016-1.png" style="width: 70%"
-              /></b-col>
-              <b-col style="text-align: left">
-                <img src="~@/assets/portfolio/2016-2.png" style="width: 100%"
-              /></b-col>
-              <a>
-                <img src="~@/assets/portfolio/arrow.png" class="arrow-port" />
-                <span
-                  ><p class="more-post-port">查看全部</p>
-                  <img
-                    src="~@/assets/mainPageImgs/circle.svg"
-                    class="circle-port-small"
-                /></span>
-              </a>
-            </b-row>
-          </div>
-        </transition>
-      </b-col>
-    </b-row>
-  </b-row>
+  <p v-if="!isMobile()">
+    <component :is="Portfolio" />
+  </p>
+  <p v-else>
+    <component :is="PortfolioMobile" />
+  </p>
 </template>
-    
-<script>
-import $ from "jquery";
+
+    <script>
+import Portfolio from "@/components/Portfolio";
+import PortfolioMobile from "@/components/PortfolioMobile";
 
 export default {
-  name: "Portfolio",
+  components: {
+    Portfolio,
+    PortfolioMobile,
+  },
   data() {
     return {
-      AisHidden: false,
-      BisHidden: true,
-      CisHidden: true,
+      Portfolio: "Portfolio",
+      PortfolioMobile: "PortfolioMobile",
     };
   },
-  mounted() {
-    $(".year-btn").click(function (event) {
-      $(this)
-        .addClass("year-btn-selected")
-        .siblings()
-        .removeClass("year-btn-selected");
-    });
+  methods: {
+    isMobile() {
+      if (process.client) {
+        return window.innerWidth <= 1000;
+      }
+    },
   },
 };
 </script>
+
 
 <style>
 .frame-logo {
@@ -191,11 +40,13 @@ export default {
   margin-top: 3%;
 }
 
-@media only screen and (max-width: 1000px) {
-  .frame-logo {
-    position: absolute;
-    width: 80px;
-  }
+.port-ping {
+  position: fixed;
+  margin-left: 0;
+  margin-top: 20%;
+  width: 25%;
+  padding: 0;
+  z-index: 100;
 }
 
 body {
@@ -213,13 +64,16 @@ body {
   position: fixed;
   background-color: #eeeeee;
   overflow-y: hidden;
+  overflow-x: hidden;
+  left: 0;
+  top: 0;
 }
 
 .vertical-word-port {
   writing-mode: vertical-rl;
   text-orientation: upright;
   position: absolute;
-  left: 17%;
+  left: 19%;
   top: 20%;
   font-family: "Noto Serif JP";
   font-weight: bold;
@@ -235,6 +89,16 @@ body {
   top: 18%;
   width: 6.5vw;
   mix-blend-mode: difference;
+}
+
+.year-selection {
+  text-align: right;
+  padding: 0;
+  position: relative;
+  z-index: 99;
+  height: 60vh;
+  line-height: 96vh;
+  margin-top: 12vh;
 }
 
 a {
@@ -262,6 +126,18 @@ a {
   opacity: 1;
 }
 
+.year-card {
+  text-align: right;
+  padding: 0;
+  position: relative;
+  z-index: 99;
+}
+
+.port-col {
+  margin-left: 10vw;
+  text-align: right;
+}
+
 button:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -282,8 +158,8 @@ button:focus {
 
 .more-post-port {
   position: relative;
-  right: -14%;
-  bottom: 30%;
+  right: -16%;
+  top: 70vh;
   font-family: "Noto Serif TC";
   font-weight: bold;
   font-size: 16px;
@@ -292,20 +168,17 @@ button:focus {
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0),
     rgb(217, 217, 217),
     rgb(217, 217, 217),
     rgb(217, 217, 217)
   );
   color: #14142b;
   text-align: right;
+}
+
+.more-post-port-special {
+  right: -16%;
+  top: 52vh;
 }
 
 .arrow-port {
@@ -317,16 +190,36 @@ button:focus {
 
 .circle-port-small {
   position: relative;
-  right: -12%;
-  bottom: 76%;
+  right: 0;
+  top: 59vh;
   width: 55px;
   mix-blend-mode: difference;
-  transform: rotate(270deg);  
+  transform: rotate(270deg);
   cursor: pointer;
   transition: transform 0.5s;
 }
 
 .circle-port-small:hover {
+  animation: fadeInOut 0.5s linear forwards;
+  transform: scale(1.2);
+}
+
+.circle-port-small-special {
+  top: 41vh;
+}
+
+.circle-port-all {
+  position: relative;
+  right: -12%;
+  bottom: 76%;
+  width: 55px;
+  mix-blend-mode: difference;
+  transform: rotate(270deg);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.circle-port-all:hover {
   animation: fadeInOut 0.5s linear forwards;
   transform: scale(1.2);
 }
@@ -340,6 +233,105 @@ button:focus {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .frame-logo {
+    position: absolute;
+    width: 80px;
+  }
+  .port-ping {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 120px;
+    width: 240px;
+    padding: 0;
+    z-index: 100;
+    mix-blend-mode: difference;
+  }
+  .main-row-port {
+    background-image: none;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: fixed;
+    background-color: #eeeeee;
+    overflow-y: scroll;
+  }
+  .vertical-word-port {
+    left: 80%;
+    top: 20%;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+  .circle-port {
+    left: 78%;
+    top: 20%;
+    width: 60px;
+  }
+  .year-btn {
+    font-size: 20px;
+  }
+  .year-btn-selected {
+    font-size: 24px;
+  }
+  .year-card {
+    height: 88vh;
+    padding: 0 15px;
+  }
+  .port-col {
+    margin: 0;
+  }
+  .more-post-port-smallscreen {
+    left: 40vw;
+    bottom: 0;
+    top: 5vh;
+    background-image: linear-gradient(
+      to right,
+      rgb(238, 238, 238),
+      rgb(238, 238, 238),
+      rgb(238, 238, 238)
+    );
+  }
+  .circle-port-smallscreen {
+    left: 35vw;
+    top: -7vh;
+    background-image: none;
+    mix-blend-mode: difference;
+  }
+  .arrow-port {
+    position: absolute;
+    right: 40%;
+    bottom: 11%;
+    z-index: 11;
+  }
+  .footer-big {
+    display: none;
+  }
+  .footer-menu {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+  }
+  .footer-line {
+    margin: 0 2%;
+  }
+  .none-small {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .none-big {
+    display: none;
+  }
+  .footer-small {
+    display: none;
   }
 }
 </style>
