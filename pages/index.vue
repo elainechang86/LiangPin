@@ -1,5 +1,13 @@
 <template>
   <b-row class="col-12 main-row">
+    <div style="margin-top: 10vh; position: absolute; right: 5%; width: 40vw;">
+      <a class="top-menu" href="/">首頁</a><span class="top-line">|</span
+      ><a class="top-menu" href="/About">關於周老師</a
+      ><span class="top-line">|</span
+      ><a class="top-menu" href="/Blog">良文共閱專區</a
+      ><span class="top-line">|</span
+      ><a class="top-menu" href="/Portfolio">敦雅閣藝廊</a>
+    </div>
     <img
       style="position: absolute; margin-top: 22%; width: 56%"
       src="~@/assets/mainPageImgs/web.png"
@@ -219,7 +227,7 @@
         </a>
       </b-col>
     </b-row>
-    <b-row class="footer-big" style="margin: 0; padding: 0">
+    <b-row class="footer-big" style="margin: 0; padding: 0; margin-top: 15vh">
       <b-col
         class="col-12"
         style="
@@ -294,7 +302,7 @@
                 ><span class="footer-line">|</span
                 ><a class="footer-menu" href="/Portfolio">敦雅閣藝廊</a>
               </div>
-              <div style="margin-top: 25px;">
+              <div style="margin-top: 25px">
                 <a class="footer-menu">FOLLOW US ON</a
                 ><a
                   ><img
@@ -311,7 +319,10 @@
               </p>
             </footer>
           </b-col>
-          <b-col class="col-1" style="position: absolute; right: 70px; bottom: 45px">
+          <b-col
+            class="col-1"
+            style="position: absolute; right: 70px; bottom: 45px"
+          >
             <a @click="scrollToTop()"
               ><img
                 src="~@/assets/mainPageImgs/toTop.png"
@@ -482,11 +493,6 @@ body {
   color: #14142b;
 }
 
-.more-post-port {
-  right: 78%;
-  z-index: 11;
-}
-
 .circle {
   width: 55px;
   mix-blend-mode: difference;
@@ -532,8 +538,13 @@ body {
   line-height: 50px;
   color: #000000;
   position: absolute;
-  right: 12%;
+  right: 25%;
   cursor: pointer;
+}
+
+.more-post-port {
+  right: 45%;
+  z-index: 11;
 }
 
 .chou {
@@ -572,6 +583,22 @@ body {
   color: black;
   letter-spacing: 0.75px;
 }
+
+.top-line {
+  margin: 0 5%;
+}
+
+.top-menu {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+}
+
 
 .copyright {
   font-family: "Noto Sans TC";
